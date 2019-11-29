@@ -1,5 +1,5 @@
 # shopify-instagram-feed-widget
-Display custom Instagram feeds on your Shopify store.
+Unlock power of Shopify and Instagram with Displaying Instagram feeds on your Shopify Store.
 
 <h3>Pre-Require Libraries</h3>
 <strong>Instafeed.js</strong> - https://github.com/stevenschobert/instafeed.js<br/>
