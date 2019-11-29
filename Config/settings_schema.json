@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Instagram Feed",
+    "settings": [
+      {
+        "type": "text",
+        "id": "insta_token",
+        "label": "Access Token"
+      },
+      {
+        "type": "text",
+        "id": "insta_id",
+        "label": "User ID",
+        "info": "If it's your account, it's the string before the first dot (.) on the Access Token."
+      }
+    ]
+  }
+]

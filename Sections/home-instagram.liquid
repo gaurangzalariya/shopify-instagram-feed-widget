@@ -1,0 +1,49 @@
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h4>{{ section.settings.subtitle | escape }}</h4>
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+  <div id="instafeed" data-access-token="{{ settings.insta_token }}" data-user-id="{{ settings.insta_id }}"></div>
+</div>
+
+<script type="text/javascript">
+var insta = $("#instafeed");
+var feed = new Instafeed({
+	get: 'user',
+  tagName: 'instafeed',
+	userId: insta.data('user-id'),
+	accessToken: insta.data('access-token'),
+  resolution: "standard_resolution"
+});
+
+feed.run();
+</script>
+
+{% schema %}
+  {
+    "name": "Instagram Feed",
+	"class": "index-section",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Insta Feed"
+    },
+	{
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Heading",
+      "default": "@instahandle | #instahashtag"
+    }
+  ],
+    "presets": [
+	  {
+		"name": "Instagram Feed",
+		"category": "Image"
+	  }
+	]
+  }
+{% endschema %}
